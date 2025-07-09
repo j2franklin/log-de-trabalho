@@ -40,5 +40,5 @@ function runBar(_porcent){
     }
 }
 
-runBar(0);
+runBar(0.24);
 
