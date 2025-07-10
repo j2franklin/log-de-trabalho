@@ -14,6 +14,34 @@ function clickMenu(){
     }
 }
 
+/* tarefas */
+const tarefas = {
+    categorias: [
+        { name: 'Preparativos', peso: 1 },
+        { name: 'Pré-diagramação', peso: 1.5 },
+        { name: 'Diagramação', peso: 2 },
+        { name: 'Revisão', peso: 1 },
+        { name: 'Web', peso: 2 },
+        { name: 'Aprovações', peso: 1.2 },
+        { name: 'Fechamentos', peso: 1 },
+    ],
+    tarefasItens: [
+        { name: 'Acerto do orçamento', categoria: 'Preparativos', dataInicio: '10/07/2025', dataFinal: '27/07/2025', check: false },
+        { name: 'Preparando o espaço de trabalho', categoria: 'Preparativos', dataInicio: '10/07/2025', dataFinal: '27/07/2025', check: false },
+        { name: 'Capitando imagens', categoria: 'Preparativos', dataInicio: '10/07/2025', dataFinal: '27/07/2025', check: false },
+        { name: 'Capitando originais', categoria: 'Preparativos', dataInicio: '10/07/2025', dataFinal: '27/07/2025', check: false },
+        { name: 'Criando lista de fontes', categoria: 'Pré-formatação', dataInicio: '10/07/2025', dataFinal: '27/07/2025', check: false },
+        { name: 'Criando lista de estilos', categoria: 'Pré-formatação', dataInicio: '10/07/2025', dataFinal: '27/07/2025', check: false },
+        { name: 'Criando arquivo de formatação (word)', categoria: 'Pré-formatação', dataInicio: '10/07/2025', dataFinal: '27/07/2025', check: false },
+        { name: 'Trabalhando no arquivo de formatação (word)', categoria: 'Pré-formatação', dataInicio: '10/07/2025', dataFinal: '27/07/2025', check: false },
+        { name: 'Finalizando arquivo de formatação (word)', categoria: 'Pré-formatação', dataInicio: '10/07/2025', dataFinal: '27/07/2025', check: false },
+        { name: 'Criando arquivo de diagramação (InDesign)', categoria: 'Diagramação', dataInicio: '10/07/2025', dataFinal: '27/07/2025', check: false },
+        { name: 'Criando projeto gráfico (InDesign)', categoria: 'Diagramação', dataInicio: '10/07/2025', dataFinal: '27/07/2025', check: false },
+        { name: 'Trabalhando no arquivo de diagramação (InDesign)', categoria: 'Diagramação', dataInicio: '10/07/2025', dataFinal: '27/07/2025', check: false },
+        { name: 'Finalizando arquivo de diagramação (InDesign)', categoria: 'Diagramação', dataInicio: '10/07/2025', dataFinal: '27/07/2025', check: false },
+    ]
+}
+
 /* barra de progresso */
 function runBar(_porcent){
     const barra = document.querySelector('.color-bar');
@@ -26,7 +54,7 @@ function runBar(_porcent){
 
     barra.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 
-    // Criar e posicionar o parágrafo com a porcentagem
+    // Criando e posicionar o parágrafo com a porcentagem
     const paragrafo = document.createElement("p");
     paragrafo.textContent = barra.style.width.replace('.', ',');
     barra.appendChild(paragrafo);
@@ -40,5 +68,5 @@ function runBar(_porcent){
     }
 }
 
-runBar(0.24);
+runBar(0);
 
