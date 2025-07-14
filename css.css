@@ -126,6 +126,33 @@ p{
     top: 28%;
 }
 
+h2{
+    display: block;
+    font-family: var(--fonte-titulo);
+    font-size: 1.5em;
+    margin-top: 2em;
+    padding: 0.7em;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    text-transform: uppercase;
+}
+
+h3{
+    font-family: var(--fonte-titulo);
+    font-size: 1.1em;
+    display: block;
+    background-color: chocolate;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+    margin: 0.2em 0;
+}
+
+.check-none{ background-color: rgb(152, 189, 233); font-weight: bold; }
+.check-false{ background-color: rgb(255, 64, 102); color: white; font-weight: bold; }
+.check-true{ background-color: rgb(20, 172, 40); color: white; font-weight: bold; }
+
 /* configuraçoes mobile */
 @media (max-width: 780px) {
 
@@ -157,11 +184,59 @@ p{
         padding: 0.3em;
         border-radius: 25%;
     }
-    
     section#observacao {
         background-color: rgb(235, 200, 149);
         margin: 1.2em 0.6em;
         padding: 1em;
         /*text-align: justify;*/
+    }
+
+    .tarefa{
+        display: flex;
+        flex-wrap: wrap;
+        justify-items: space-around;
+        background-color: rgb(20, 20, 20);
+        margin: 0.3em 0;
+        padding: 0.1em 0;
+    }
+    .flex-line{
+        width: 100%;
+        display: flex;
+    }
+    .tarefa-nome, .tarefa-inicio, .tarefa-entrega, .check{
+        justify-self: center;
+        align-self: center;
+        flex-grow: 1;
+        padding: 0.2em;
+        margin: 0.1em;
+        text-align: center;
+        font-family: var(--fonte-texto);
+        font-size: 0.9em;
+        line-height: 1.2;
+    }
+    .tarefa-nome, .tarefa-inicio, .tarefa-entrega{ background-color: rgb(188, 255, 233); }
+    .tarefa-nome{
+        background-color:rgb(206, 158, 250);
+        font-style: italic;
+        padding: 0.4em 0.1em;
+    }
+    .controle{
+        margin: 0.3em 0.4em;
+        border-bottom: 1px solid rgb(20, 20, 20);
+    }
+    .label{
+        font-family: var(--fonte-titulo);
+        font-family: 0.7em;
+        padding: 0.3em;
+        font-style: italic;
+        color: darkgray;
+        margin-bottom: 0.4em;
+    }
+    .detalhe{ 
+        font-family: var(--fonte-texto);
+        font-size: 1em;
+        line-height: 1.2;
+        text-align: right;
+        margin-bottom: 0.5em;
     }
 }
