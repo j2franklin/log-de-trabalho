@@ -1,0 +1,242 @@
+/* restart */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* ------------------------------------ */
+/* variables */
+:root {
+    --fonte-titulo: "Oswald", sans-serif;
+    --fonte-texto: "Open Sans", sans-serif;
+    --fonte-observacao: "Inconsolata", monospace;
+    --cor-barra-titulo: rgb(238, 106, 17);
+    --cor-barra-logo: rgb(64, 64, 182);
+}
+/* ------------------------------------ */
+main{ width: 100%; }
+main #header{
+    display: block;
+    position: fixed;
+    top: 0;
+    color: rgb(172, 232, 240);
+    font-family: var(--fonte-titulo);
+    text-align: center;
+    padding: 0.5em 0;
+    background-color: var(--cor-barra-logo);
+    width: 100%;
+    height: auto;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    z-index: 999;
+}
+
+p{
+    font-family: var(--fonte-texto);
+    font-size: 0.9em;
+    line-height: 1.2;
+}
+
+.mesma-linha{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    border-bottom: 2px solid rgb(79, 221, 240);
+    padding-bottom: 0.3em;
+}
+
+#nav-pc{
+    display: block;
+    margin-top: 2em;
+}
+
+.top-margem{ margin-top: 5em; }
+
+#bar-progresso{
+    display: block;
+    margin: 1.2em auto;
+    width: 90%;
+    height: 62px;
+    background-color: rgb(66, 66, 66);
+    border-bottom: 3px solid black;
+}
+.color-bar{
+    position: relative;
+    background-color: lightgreen;
+    height: 97.5%;
+    width: 0;
+    border-bottom: 2px solid rgba(226, 226, 226, 0.705);
+}
+.color-bar p{
+    display: block;
+    position: absolute;
+    font-family: var(--fonte-observacao);
+    font-weight: bold;
+    font-size: 0.7em;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: green;
+    /*border: 1px solid green;*/
+    border-radius: 4px;
+    width: 36px;
+    height: auto;
+    padding: 0.4em;
+    top: 28%;
+}
+
+h2{
+    display: block;
+    font-family: var(--fonte-titulo);
+    font-size: 1.5em;
+    margin-top: 2em;
+    padding: 0.7em;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    text-transform: uppercase;
+}
+
+h3{
+    font-family: var(--fonte-titulo);
+    font-size: 1.1em;
+    display: block;
+    background-color: chocolate;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+    margin: 0.2em 0;
+}
+
+.check-none{ background-color: rgb(152, 189, 233); font-weight: bold; }
+.check-false{ background-color: rgb(255, 64, 102); color: white; font-weight: bold; }
+.check-true{ background-color: rgb(20, 172, 40); color: white; font-weight: bold; }
+
+/* configuraçoes mobile */
+@media (max-width: 780px) {
+
+    #nav-pc {
+        display: none;
+    }
+
+    #nav-mobile {
+        display: none;
+        margin-bottom: 0.8em;
+    }
+
+    #nav-mobile li{
+        border-bottom: 1.2px solid var(--cor-barra-titulo);
+        padding: 1em 0;
+        text-align: center;
+        font-family: var(--fonte-texto);
+        font-weight: 500;
+        font-size: 0.8em;
+        text-transform: uppercase;
+    }
+    #nav-mobile li a{
+        color: white;
+        text-decoration: none;
+    }
+
+    .mesma-linha h1{ color: white; }
+    .mesma-linha i{
+        padding: 0.3em;
+        border-radius: 25%;
+    }
+    section#observacao {
+        background-color: rgb(235, 200, 149);
+        margin: 1.2em 0.6em;
+        padding: 1em;
+        /*text-align: justify;*/
+    }
+
+    .tarefa{
+        display: flex;
+        flex-wrap: wrap;
+        justify-items: space-around;
+        background-color: rgb(20, 20, 20);
+        margin: 0.3em 0;
+        padding: 0.1em 0;
+    }
+    .flex-line{
+        width: 100%;
+        display: flex;
+    }
+    .tarefa-nome, .tarefa-inicio, .tarefa-entrega, .check{
+        justify-self: center;
+        align-self: center;
+        flex-grow: 1;
+        padding: 0.2em;
+        margin: 0.1em;
+        text-align: center;
+        font-family: var(--fonte-texto);
+        font-size: 0.9em;
+        line-height: 1.2;
+    }
+    .tarefa-nome, .tarefa-inicio, .tarefa-entrega{ background-color: rgb(188, 255, 233); }
+    .tarefa-nome{
+        background-color:rgb(206, 158, 250);
+        font-style: italic;
+        padding: 0.4em 0.1em;
+    }
+    .controle{
+        margin: 0.3em 0.4em;
+        border-bottom: 1px solid rgb(20, 20, 20);
+    }
+    .label{
+        font-family: var(--fonte-titulo);
+        font-family: 0.7em;
+        padding: 0.3em;
+        font-style: italic;
+        color: darkgray;
+        margin-bottom: 0.4em;
+    }
+    .detalhe{ 
+        font-family: var(--fonte-texto);
+        font-size: 1em;
+        line-height: 1.2;
+        text-align: right;
+        margin-bottom: 0.5em;
+    }
+}
