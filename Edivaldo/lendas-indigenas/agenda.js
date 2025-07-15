@@ -198,5 +198,5 @@ function writeDetails(nome, autor, edicao, ano, sinopse, tags, descricao, dimens
 
 writeDetails( projeto.nome, projeto.autor, projeto.edicao, projeto.ano, projeto.sinopse, projeto.tags, projeto.descricao, projeto.dimensoes, projeto.relevantes );
 writeTask();
-runBar(0);
+runBar(0.5);
 
