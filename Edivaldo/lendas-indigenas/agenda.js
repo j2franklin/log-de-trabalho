@@ -26,26 +26,37 @@ const tarefas = {
         { name: 'Fechamentos', peso: 1 },
     ],
     tarefasItens: [
-        { name: 'Acerto do orçamento', categoria: 'Preparativos', dataInicio: '01/07/2025', dataFinal: '31/07/2025', started: false, check: false, used: true },
-        { name: 'Preparando o espaço de trabalho', categoria: 'Preparativos', dataInicio: '01/07/2025', dataFinal: '31/07/2025', started: false, check: false, used: true },
-        { name: 'Capitando imagens', categoria: 'Preparativos', dataInicio: '01/07/2025', dataFinal: '31/07/2025', started: false, check: false, used: true },
-        { name: 'Capitando originais', categoria: 'Preparativos', dataInicio: '01/07/2025', dataFinal: '31/07/2025', started: false, check: false, used: true },
-        { name: 'Criando lista de fontes', categoria: 'Pré-formatação', dataInicio: '01/07/2025', dataFinal: '31/07/2025', started: false, check: false, used: true },
-        { name: 'Criando lista de estilos', categoria: 'Pré-formatação', dataInicio: '01/07/2025', dataFinal: '31/07/2025', started: false, check: false, used: true },
-        { name: 'Criando arquivo de formatação (word)', categoria: 'Pré-formatação', dataInicio: '01/07/2025', dataFinal: '31/07/2025', started: false, check: false, used: true },
-        { name: 'Trabalhando no arquivo de formatação (word)', categoria: 'Pré-formatação', dataInicio: '01/07/2025', dataFinal: '31/07/2025', started: false, check: false, used: true },
-        { name: 'Finalizando arquivo de formatação (word)', categoria: 'Pré-formatação', dataInicio: '01/07/2025', dataFinal: '31/07/2025', started: false, check: false, used: true },
-        { name: 'Criando arquivo de diagramação (InDesign)', categoria: 'Diagramação', dataInicio: '01/07/2025', dataFinal: '31/07/2025', started: false, check: false, used: true },
-        { name: 'Criando projeto gráfico (InDesign)', categoria: 'Diagramação', dataInicio: '01/07/2025', dataFinal: '31/07/2025', started: false, check: false, used: true },
-        { name: 'Trabalhando no arquivo de diagramação (InDesign)', categoria: 'Diagramação', dataInicio: '01/07/2025', dataFinal: '31/07/2025', started: false, check: false, used: true },
-        { name: 'Finalizando arquivo de diagramação (InDesign)', categoria: 'Diagramação', dataInicio: '01/07/2025', dataFinal: '31/07/2025', started: false, check: false, used: true },
+        { name: 'Acerto do orçamento', categoria: 'Preparativos', dataInicio: '17/06/2025', dataFinal: '17/06/2025', started: true, check: true, used: true },
+        { name: 'Preparando o espaço de trabalho', categoria: 'Preparativos', dataInicio: '05/07/2025', dataFinal: '15/07/2025', started: true, check: false, used: true },
+        { name: 'Capitando imagens', categoria: 'Preparativos', dataInicio: '20/07/2025', dataFinal: '31/07/2025', started: false, check: false, used: true },
+        { name: 'Capitando originais', categoria: 'Preparativos', dataInicio: '17/06/2025', dataFinal: '05/07/2025', started: true, check: true, used: true },
+        { name: 'Criando lista de fontes', categoria: 'Pré-formatação', dataInicio: '15/07/2025', dataFinal: '16/07/2025', started: true, check: false, used: true },
+        { name: 'Criando lista de estilos', categoria: 'Pré-formatação', dataInicio: '15/07/2025', dataFinal: '16/07/2025', started: true, check: true, used: true },
+        { name: 'Criando arquivo de formatação (word)', categoria: 'Pré-formatação', dataInicio: '10/07/2025', dataFinal: '10/07/2025', started: true, check: true, used: true },
+        { name: 'Trabalhando no arquivo de formatação (word)', categoria: 'Pré-formatação', dataInicio: '10/07/2025', dataFinal: '16/07/2025', started: true, check: false, used: true },
+        { name: 'Finalizando arquivo de formatação (word)', categoria: 'Pré-formatação', dataInicio: '16/07/2025', dataFinal: '16/07/2025', started: true, check: true, used: true },
+        { name: 'Criando arquivo de diagramação (InDesign)', categoria: 'Diagramação', dataInicio: '14/07/2025', dataFinal: '14/07/2025', started: true, check: true, used: true },
+        { name: 'Criando projeto gráfico (InDesign)', categoria: 'Diagramação', dataInicio: '15/07/2025', dataFinal: '16/07/2025', started: false, check: false, used: true },
+        { name: 'Trabalhando no arquivo de diagramação (InDesign)', categoria: 'Diagramação', dataInicio: '17/07/2025', dataFinal: '21/07/2025', started: false, check: false, used: true },
+        { name: 'Finalizando arquivo de diagramação (InDesign)', categoria: 'Diagramação', dataInicio: '21/07/2025', dataFinal: '23/07/2025', started: false, check: false, used: true },
+        { name: 'Aprovação de projeto gráfico', categoria: 'Aprovações', dataInicio: '17/07/2025', dataFinal: '21/07/2025', started: false, check: false, used: true },
+        { name: 'Aprovação de diagramação', categoria: 'Aprovações', dataInicio: '21/07/2025', dataFinal: '25/07/2025', started: false, check: false, used: true },
+        { name: 'Revisões de diagramação', categoria: 'Revisão', dataInicio: '25/07/2025', dataFinal: '28/07/2025', started: false, check: false, used: true },
+        { name: 'Criação do projeto web', categoria: 'Web', dataInicio: '28/07/2025', dataFinal: '28/07/2025', started: false, check: false, used: true },
+        { name: 'Trabalhando no projeto web', categoria: 'Web', dataInicio: '28/07/2025', dataFinal: '30/07/2025', started: false, check: false, used: true },
+        { name: 'Finalizando projeto web', categoria: 'Web', dataInicio: '30/07/2025', dataFinal: '31/07/2025', started: false, check: false, used: true },
+        { name: 'Revisão de projeto web', categoria: 'Revisão', dataInicio: '31/07/2025', dataFinal: '04/08/2025', started: false, check: false, used: true },
+        { name: 'Fechamento de diagramação (InDesign)', categoria: 'Fechamentos', dataInicio: '23/07/2025', dataFinal: '25/07/2025', started: false, check: false, used: true },
+        { name: 'Fechamento de projeto web', categoria: 'Fechamentos', dataInicio: '04/08/2025', dataFinal: '06/08/2025', started: false, check: false, used: true },
+        { name: 'Período de revisão gratuita', categoria: 'Fechamentos', dataInicio: '06/07/2025', dataFinal: '27/08/2025', started: false, check: false, used: true },
+        { name: 'PROJETO FECHADO', categoria: 'Fechamentos', dataInicio: '28/08/2025', dataFinal: '28/08/2025', started: false, check: false, used: true },
     ]
 }
 
 /* barra de progresso */
 function runBar(_porcent){
     const barra = document.querySelector('.color-bar');
-    barra.style.width = `${(100 * _porcent)}%`;
+    barra.style.width = `${Math.round((100 * _porcent)*100)/100}%`;
 
     // Calcular cor interpolada entre vermelho (255,0,0) e verde (0,255,0)
     const r = Math.round(255 * (1 - _porcent));
@@ -101,7 +112,6 @@ function writeTask(){
                 _status = 'Em progresso...'
             } 
         }
-        console.log(`${_classe}|${_status}`);
         
         const writeDefault = `
                             <div class="tarefa">
@@ -125,7 +135,7 @@ function writeTask(){
                 case 'Web': writeWeb += writeDefault; break;
                 case 'Aprovações': writeAprov += writeDefault; break;
                 case 'Fechamentos': writeFech += writeDefault; break;
-                case 'Revisões': writeRev += writeDefault; break;
+                case 'Revisão': writeRev += writeDefault; break;
             }
         }
     })
@@ -196,7 +206,38 @@ function writeDetails(nome, autor, edicao, ano, sinopse, tags, descricao, dimens
     document.querySelector('#proj-detalhes').innerHTML = projDetails;
 }
 
+/* calculando o progresso da barra... */
+function calcLoad(){
+    /* somar todos os pesos das tarefas */
+    let somaTarefas = 0;
+    let somaChecked = 0;
+    for( var i = 0; i < tarefas.tarefasItens.length; i++ ){
+        let somaPesos = 0
+        while( somaPesos < tarefas.categorias.length ){
+            somaTarefas += ( tarefas.tarefasItens[i].categoria == tarefas.categorias[somaPesos].name ) ? tarefas.categorias[somaPesos].peso : 0;
+            somaPesos++;
+        }
+    }
+    tarefas.tarefasItens.forEach( e => {
+        let ii = 0;
+        if( e.check ){
+            while( ii < tarefas.categorias[ii].peso ){
+                somaChecked += ( e.categoria == tarefas.categorias[ii].name ) ? tarefas.categorias[ii].peso : 0;
+                ii++;
+            }
+        }
+    })
+    console.log(`${somaChecked} divido por ${somaTarefas}`);
+    
+    return somaChecked/somaTarefas;
+}
+
+/* escrevendo detalhes do projeto... */
 writeDetails( projeto.nome, projeto.autor, projeto.edicao, projeto.ano, projeto.sinopse, projeto.tags, projeto.descricao, projeto.dimensoes, projeto.relevantes );
+/* escrevendo as tarefas do projeto... */
 writeTask();
-runBar(0.5);
+/* atualizando barra de progresso... */
+const PesoTarefas = calcLoad();
+
+runBar(PesoTarefas);
 
