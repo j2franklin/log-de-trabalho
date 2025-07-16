@@ -151,14 +151,17 @@ function writeTask(){
 
 /* detalhes do projeto */
 const projeto = {
-    nome: 'Nome do livro',
-    autor: ['Fulano da Silva'],
+    nome: 'As Lendas e os Mistérios dos Povos Indígenas',
+    autor: ['Edvaldo Silva'],
     edicao: '1',
     ano: '2025',
-    sinopse: 'Essa escrita vai na parte de trás da quarta capa',
-    tags: ['teste', 'comprovação', 'javascript'],
-    descricao: 'Essa escrita vai na parte interna do livro e vai ser lido pelos leitores de eBook.',
-    dimensoes: [275, 205],
+    sinopse: `O Brasil é um verdadeiro baú do tesouro de histórias fantásticas que não precisam de mapa para ser encontradas. Elas estão bem no coração das nossas florestas e vêm sendo contadas há séculos pelas populações nativas.
+O livro “As Lendas e os Mistérios dos Povos Indígenas” é o seu passaporte para essas aventuras incríveis! São dez histórias baseadas nas famosas lendas brasileiras, mas contadas aqui de um jeito muito divertido! Imagine-se numa densa floresta, cercado por árvores centenárias e sons misteriosos... será o vento ou alguma criatura encantada?
+A cada página você se surpreenderá com cenas totalmente inesperadas e, enquanto você se diverte, também descobre a ligação ancestral dos povos indígenas com a natureza, suas crenças e valores, além de vivenciar lições valiosas sobre respeito, coragem e a importância de cuidar da nossa terra.
+Então, pronto para a viagem? Abra este livro e se prepare para rir, se emocionar e desvendar toda a magia das nossas amadas lendas brasileiras!`,
+    tags: ['lendas', 'indigenas', 'literatura', 'nacional', 'literatura', 'infanto', 'juvenil'],
+    descricao: `“As Lendas e os Mistérios dos Povos Indígenas” é uma obra voltado ao público infanto-juvenil com contos baseados nas lendas dos nossos povos originários.`,
+    dimensoes: [205, 275],
     isbnFisico: '000-0000-00-0',
     isbnDigital: '000-0000-00-0',
     relevantes: 'Quaisquer outras informações pertinentes para serem postas aqui sobre a obra em específico.'
