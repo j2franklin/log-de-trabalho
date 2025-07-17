@@ -30,14 +30,14 @@ const tarefas = {
         { name: 'Preparando o espaço de trabalho', categoria: 'Preparativos', dataInicio: '05/07/2025', dataFinal: '15/07/2025', started: true, check: false, used: true },
         { name: 'Capitando imagens', categoria: 'Preparativos', dataInicio: '20/07/2025', dataFinal: '31/07/2025', started: false, check: false, used: true },
         { name: 'Capitando originais', categoria: 'Preparativos', dataInicio: '17/06/2025', dataFinal: '05/07/2025', started: true, check: true, used: true },
-        { name: 'Criando lista de fontes', categoria: 'Pré-formatação', dataInicio: '15/07/2025', dataFinal: '16/07/2025', started: true, check: false, used: true },
-        { name: 'Criando lista de estilos', categoria: 'Pré-formatação', dataInicio: '15/07/2025', dataFinal: '16/07/2025', started: true, check: true, used: true },
-        { name: 'Criando arquivo de formatação (word)', categoria: 'Pré-formatação', dataInicio: '10/07/2025', dataFinal: '10/07/2025', started: true, check: true, used: true },
-        { name: 'Trabalhando no arquivo de formatação (word)', categoria: 'Pré-formatação', dataInicio: '10/07/2025', dataFinal: '16/07/2025', started: true, check: false, used: true },
-        { name: 'Finalizando arquivo de formatação (word)', categoria: 'Pré-formatação', dataInicio: '16/07/2025', dataFinal: '16/07/2025', started: true, check: true, used: true },
+        { name: 'Criando lista de fontes', categoria: 'Pré-diagramação', dataInicio: '15/07/2025', dataFinal: '16/07/2025', started: true, check: true, used: true },
+        { name: 'Criando lista de estilos', categoria: 'Pré-diagramação', dataInicio: '15/07/2025', dataFinal: '16/07/2025', started: true, check: true, used: true },
+        { name: 'Criando arquivo de formatação (word)', categoria: 'Pré-diagramação', dataInicio: '10/07/2025', dataFinal: '10/07/2025', started: true, check: true, used: true },
+        { name: 'Trabalhando no arquivo de formatação (word)', categoria: 'Pré-diagramação', dataInicio: '10/07/2025', dataFinal: '16/07/2025', started: true, check: true, used: true },
+        { name: 'Finalizando arquivo de formatação (word)', categoria: 'Pré-diagramação', dataInicio: '16/07/2025', dataFinal: '16/07/2025', started: true, check: true, used: true },
         { name: 'Criando arquivo de diagramação (InDesign)', categoria: 'Diagramação', dataInicio: '14/07/2025', dataFinal: '14/07/2025', started: true, check: true, used: true },
-        { name: 'Criando projeto gráfico (InDesign)', categoria: 'Diagramação', dataInicio: '15/07/2025', dataFinal: '16/07/2025', started: false, check: false, used: true },
-        { name: 'Trabalhando no arquivo de diagramação (InDesign)', categoria: 'Diagramação', dataInicio: '17/07/2025', dataFinal: '21/07/2025', started: false, check: false, used: true },
+        { name: 'Criando projeto gráfico (InDesign)', categoria: 'Diagramação', dataInicio: '15/07/2025', dataFinal: '16/07/2025', started: true, check: false, used: true },
+        { name: 'Trabalhando no arquivo de diagramação (InDesign)', categoria: 'Diagramação', dataInicio: '17/07/2025', dataFinal: '21/07/2025', started: true, check: false, used: true },
         { name: 'Finalizando arquivo de diagramação (InDesign)', categoria: 'Diagramação', dataInicio: '21/07/2025', dataFinal: '23/07/2025', started: false, check: false, used: true },
         { name: 'Aprovação de projeto gráfico', categoria: 'Aprovações', dataInicio: '17/07/2025', dataFinal: '21/07/2025', started: false, check: false, used: true },
         { name: 'Aprovação de diagramação', categoria: 'Aprovações', dataInicio: '21/07/2025', dataFinal: '25/07/2025', started: false, check: false, used: true },
@@ -130,7 +130,7 @@ function writeTask(){
         if( item.used ){
             switch( item.categoria ){
                 case 'Preparativos': writePrep += writeDefault; break;
-                case 'Pré-formatação': writePreDiagr += writeDefault; break;
+                case 'Pré-diagramação': writePreDiagr += writeDefault; break;
                 case 'Diagramação': writeDiagr += writeDefault; break;
                 case 'Web': writeWeb += writeDefault; break;
                 case 'Aprovações': writeAprov += writeDefault; break;
@@ -225,6 +225,8 @@ function calcLoad(){
         let ii = 0;
         if( e.check ){
             while( ii < tarefas.categorias[ii].peso ){
+                console.log(tarefas.categorias[ii].name);
+                
                 somaChecked += ( e.categoria == tarefas.categorias[ii].name ) ? tarefas.categorias[ii].peso : 0;
                 ii++;
             }
