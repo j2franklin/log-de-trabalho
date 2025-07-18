@@ -239,4 +239,7 @@ h3{
         text-align: right;
         margin-bottom: 0.5em;
     }
+    img{
+        max-width: 100%;
+    }
 }
