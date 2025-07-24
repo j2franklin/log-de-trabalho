@@ -26,9 +26,9 @@ const tarefas = {
         { name: 'Fechamentos', peso: 1 },
     ],
     tarefasItens: [
-        { name: 'Acerto do orçamento', categoria: 'Preparativos', dataInicio: '23/07/2025', dataFinal: '24/07/2025', started: true, check: false, used: true },
-        { name: 'Preparando o espaço de trabalho', categoria: 'Preparativos', dataInicio: '23/07/2025', dataFinal: '25/07/2025', started: true, check: false, used: true },
-        { name: 'Capitando imagens', categoria: 'Preparativos', dataInicio: '24/07/2025', dataFinal: '25/07/2025', started: false, check: false, used: true},
+        { name: 'Acerto do orçamento', categoria: 'Preparativos', dataInicio: '23/07/2025', dataFinal: '24/07/2025', started: true, check: true, used: true },
+        { name: 'Preparando o espaço de trabalho', categoria: 'Preparativos', dataInicio: '23/07/2025', dataFinal: '25/07/2025', started: true, check: true, used: true },
+        { name: 'Capitando imagens', categoria: 'Preparativos', dataInicio: '24/07/2025', dataFinal: '25/07/2025', started: true, check: true, used: true},
         { name: 'Capitando originais', categoria: 'Preparativos', dataInicio: '17/06/2025', dataFinal: '05/07/2025', started: false, check: false, used: false },
         { name: 'Criando lista de fontes', categoria: 'Pré-diagramação', dataInicio: '15/07/2025', dataFinal: '16/07/2025', started: false, check: false, used: false },
         { name: 'Criando lista de estilos', categoria: 'Pré-diagramação', dataInicio: '15/07/2025', dataFinal: '16/07/2025', started: false, check: false, used: false },
