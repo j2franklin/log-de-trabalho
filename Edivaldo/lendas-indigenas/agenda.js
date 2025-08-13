@@ -224,9 +224,7 @@ function calcLoad(){
     tarefas.tarefasItens.forEach( e => {
         let ii = 0;
         if( e.check ){
-            while( ii < tarefas.categorias[ii].peso ){
-                console.log(tarefas.categorias[ii].name);
-                
+            while( ii < tarefas.categorias.length ){
                 somaChecked += ( e.categoria == tarefas.categorias[ii].name ) ? tarefas.categorias[ii].peso : 0;
                 ii++;
             }
