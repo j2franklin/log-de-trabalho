@@ -224,16 +224,22 @@ function calcLoad(){
             }
         }
     }
+    let teste = 0;
     tarefas.tarefasItens.forEach( e => {
         let ii = 0;
+        console.log(teste);
         if( e.check && e.used && e.started ){
-            while( ii < tarefas.categorias[ii].peso ){
-                console.log(tarefas.categorias[ii].name);
-                
+            while( ii < tarefas.categorias.length ){
                 somaChecked += ( e.categoria == tarefas.categorias[ii].name ) ? tarefas.categorias[ii].peso : 0;
+                
+                console.log(`Se ${e.categoria} == ${tarefas.categorias[ii].name}`);
+                console.log(`${'somaChecked = '}${somaChecked-1} + ${( e.categoria == tarefas.categorias[ii].name ) ? tarefas.categorias[ii].peso : 0}`);
+                
                 ii++;
             }
         }
+        teste++;
+        
     })
     console.log(`${somaChecked} divido por ${somaTarefas}`);
     
