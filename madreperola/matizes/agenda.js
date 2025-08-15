@@ -1,0 +1,253 @@
+/* toggle do menu */
+function clickMenu(){
+    const menu = document.querySelector('#nav-mobile');
+    const icon = document.querySelector('#menu-button');
+
+    if( menu.style.display == 'none' ){
+        menu.style.display = 'block';
+        icon.style.backgroundColor = '#05056d';
+        icon.style.color = '#fff';
+    }else{
+        menu.style.display = 'none';
+        icon.style.backgroundColor = '#4040b6';
+        icon.style.color = '#ace8f0';
+    }
+}
+
+/* tarefas */
+const tarefas = {
+    categorias: [
+        { name: 'Preparativos', peso: 1 },
+        { name: 'Pré-diagramação', peso: 1.5 },
+        { name: 'Diagramação', peso: 2 },
+        { name: 'Revisão', peso: 1 },
+        { name: 'Web', peso: 2 },
+        { name: 'Aprovações', peso: 1.2 },
+        { name: 'Fechamentos', peso: 1 },
+    ],
+    tarefasItens: [
+        { name: 'Acerto do orçamento', categoria: 'Preparativos', dataInicio: '13/08/2025', dataFinal: '13/08/2025', started: true, check: true, used: true },
+        { name: 'Preparando o espaço de trabalho', categoria: 'Preparativos', dataInicio: '13/08/2025', dataFinal: '15/08/2025', started: true, check: true, used: true },
+        { name: 'Capitando imagens', categoria: 'Preparativos', dataInicio: '14/08/2025', dataFinal: '15/08/2025', started: true, check: true, used: true },
+        { name: 'Capitando originais', categoria: 'Preparativos', dataInicio: '13/08/2025', dataFinal: '12/08/2025', started: false, check: false, used: false },
+        { name: 'Criando lista de fontes', categoria: 'Pré-diagramação', dataInicio: '13/08/2025', dataFinal: '08/08/2025', started: true, check: false, used: true },
+        { name: 'Criando lista de estilos', categoria: 'Pré-diagramação', dataInicio: '13/08/2025', dataFinal: '08/08/2025', started: true, check: false, used: true },
+        { name: 'Criando arquivo de formatação (word)', categoria: 'Pré-diagramação', dataInicio: '13/08/2025', dataFinal: '05/08/2025', started: false, check: false, used: false },
+        { name: 'Trabalhando no arquivo de formatação (word)', categoria: 'Pré-diagramação', dataInicio: '13/08/2025', dataFinal: '07/08/2025', started: false, check: false, used: false },
+        { name: 'Finalizando arquivo de formatação (word)', categoria: 'Pré-diagramação', dataInicio: '13/08/2025', dataFinal: '07/08/2025', started: false, check: false, used: false },
+        { name: 'Criando arquivo de diagramação (InDesign)', categoria: 'Diagramação', dataInicio: '13/08/2025', dataFinal: '07/08/2025', started: false, check: false, used: false },
+        { name: 'Criando projeto gráfico (InDesign)', categoria: 'Diagramação', dataInicio: '13/08/2025', dataFinal: '11/08/2025', started: false, check: false, used: false },
+        { name: 'Trabalhando no arquivo de diagramação (InDesign)', categoria: 'Diagramação', dataInicio: '13/08/2025', dataFinal: '15/08/2025', started: false, check: false, used: false },
+        { name: 'Finalizando arquivo de diagramação (InDesign)', categoria: 'Diagramação', dataInicio: '13/08/2025', dataFinal: '13/08/2025', started: false, check: false, used: false },
+        { name: 'Aprovação de projeto gráfico', categoria: 'Aprovações', dataInicio: '13/08/2025', dataFinal: '14/08/2025', started: false, check: false, used: false },
+        { name: 'Aprovação de diagramação', categoria: 'Aprovações', dataInicio: '13/08/2025', dataFinal: '17/08/2025', started: false, check: false, used: false },
+        { name: 'Revisões de diagramação', categoria: 'Revisão', dataInicio: '13/08/2025', dataFinal: '18/08/2025', started: false, check: false, used: false },
+        { name: 'Criação do projeto web', categoria: 'Web', dataInicio: '15/08/2025', dataFinal: '15/08/2025', started: true, check: false, used: true },
+        { name: 'Trabalhando no projeto web', categoria: 'Web', dataInicio: '15/08/2025', dataFinal: '16/08/2025', started: true, check: false, used: true },
+        { name: 'Finalizando projeto web', categoria: 'Web', dataInicio: '16/08/2025', dataFinal: '18/08/2025', started: false, check: false, used: true },
+        { name: 'Revisão de projeto web', categoria: 'Revisão', dataInicio: '18/08/2025', dataFinal: '19/08/2025', started: false, check: false, used: true },
+        { name: 'Fechamento de diagramação (InDesign)', categoria: 'Fechamentos', dataInicio: '13/08/2025', dataFinal: '19/08/2025', started: false, check: false, used: false },
+        { name: 'Fechamento de projeto web', categoria: 'Fechamentos', dataInicio: '18/08/2025', dataFinal: '20/08/2025', started: false, check: false, used: true},
+        { name: 'Período de revisão gratuita', categoria: 'Fechamentos', dataInicio: '20/08/2025', dataFinal: '20/09/2025', started: false, check: false, used: true },
+        { name: 'PROJETO FECHADO', categoria: 'Fechamentos', dataInicio: '20/09/2025', dataFinal: '21/09/2025', started: false, check: false, used: true },
+    ]
+}
+
+/* barra de progresso */
+function runBar(_porcent){
+    const barra = document.querySelector('.color-bar');
+    barra.style.width = `${Math.round((100 * _porcent)*100)/100}%`;
+
+    // Calcular cor interpolada entre vermelho (255,0,0) e verde (0,255,0)
+    const r = Math.round(255 * (1 - _porcent));
+    const g = Math.round(255 * _porcent);
+    const b = 0;
+
+    barra.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+
+    // Criando e posicionar o parágrafo com a porcentagem
+    const paragrafo = document.createElement("p");
+    paragrafo.textContent = barra.style.width.replace('.', ',');
+    barra.appendChild(paragrafo);
+
+    if (_porcent <= 0.10) {
+        paragrafo.style.left = '8px';
+    } else if (_porcent > 0.10 && _porcent <= 0.91) {
+        paragrafo.style.right = '-24px';
+    } else if (_porcent > 0.91) {
+        paragrafo.style.right = '8px';
+    }
+}
+
+/* inscrever tarefas... */
+function writeTask(){
+    const taskPrep = document.querySelector('#id-preparativos');
+    const taskPreDiagr = document.querySelector('#id-pre-diagramacao');
+    const taskDiagr = document.querySelector('#id-diagramacao');
+    const taskWeb = document.querySelector('#id-web');
+    const taskAprov = document.querySelector('#id-aprovacoes');
+    const taskFech = document.querySelector('#id-fechamentos');
+    const taskRev = document.querySelector('#id-revisoes');
+
+    let writePrep = '';
+    let writePreDiagr = '';
+    let writeDiagr = '';
+    let writeWeb = '';
+    let writeAprov = '';
+    let writeFech = '';
+    let writeRev = '';
+
+    tarefas.tarefasItens.forEach( item => {
+        let _classe = '';
+        let _status = '';
+        if( !item.started ){ 
+            _classe = 'check-none'; 
+            _status = 'Tarefa não iniciada'
+        }else{ 
+            if(item.check){ 
+                _classe = 'check-true';
+                _status = 'Finalizada'
+            }else{ 
+                _classe = 'check-false';
+                _status = 'Em progresso...'
+            } 
+        }
+        
+        const writeDefault = `
+                            <div class="tarefa">
+                                <div class="flex-line">
+                                    <div class="tarefa-nome">${item.name}</div>
+                                </div>
+                                <div class="flex-line">
+                                    <div class="tarefa-inicio">Início: ${item.dataInicio}</div>
+                                    <div class="tarefa-entrega">Fim: ${item.dataFinal}</div>
+                                </div>
+                                <div class="flex-line">
+                                    <div class="check ${_classe}">${_status}</div>
+                                </div>
+                            </div>
+                        `;
+        if( item.used ){
+            switch( item.categoria ){
+                case 'Preparativos': writePrep += writeDefault; break;
+                case 'Pré-diagramação': writePreDiagr += writeDefault; break;
+                case 'Diagramação': writeDiagr += writeDefault; break;
+                case 'Web': writeWeb += writeDefault; break;
+                case 'Aprovações': writeAprov += writeDefault; break;
+                case 'Fechamentos': writeFech += writeDefault; break;
+                case 'Revisão': writeRev += writeDefault; break;
+            }
+        }
+    })
+
+    taskPrep.innerHTML = writePrep;
+    taskPreDiagr.innerHTML = writePreDiagr;
+    taskDiagr.innerHTML = writeDiagr;
+    taskWeb.innerHTML = writeWeb;
+    taskAprov.innerHTML = writeAprov;
+    taskFech.innerHTML = writeFech;
+    taskRev.innerHTML = writeRev;
+}
+
+/* detalhes do projeto */
+const projeto = {
+    nome: 'Matizes',
+    autor: ['Ana Fonseca', 'Maurenn Veras'],
+    edicao: '2ª edição',
+    ano: '2025',
+    sinopse: `O céu é azul? Matizes convida o leitor para uma viagem pelo mundo, instigando o olhar para a diversidade, pois, assim como as pessoas, o céu tem muitas cores.`,
+    tags: ['céu', 'diferenças', 'equidade', 'prosa', 'poesia'],
+    descricao: `O céu é azul? Matizes convida o leitor para uma viagem pelo mundo, instigando o olhar para a diversidade, pois, assim como as pessoas, o céu tem muitas cores.`,
+    dimensoes: [275, 205],
+    isbnFisico: '978-65-83682-00-0 (fisico)',
+    isbnDigital: '978-65-984575-8-7 (digital)',
+    relevantes: 'Edição de Juliana Pádua. Orçamento de R$ 756,31. Pagamento à vista no dia de entrega.'
+}
+
+function writeDetails(nome, autor, edicao, ano, sinopse, tags, descricao, dimensoes, isbnfisico, isbndigital, relevantes){
+    const projDetails = `
+        <div class="controle">
+            <div class="label">Nome</div>
+            <div class="detalhe">${nome}</div>
+        </div>
+        <div class="controle">
+            <div class="label">Autor(es)</div>
+            <div class="detalhe">${autor.join(', ')}</div>
+        </div>
+        <div class="controle">
+            <div class="label">Edição</div>
+            <div class="detalhe">${edicao}</div>
+        </div>
+        <div class="controle">
+            <div class="label">Ano de publicação</div>
+            <div class="detalhe">${ano}</div>
+        </div>
+        <div class="controle">
+            <div class="label">Sinopse</div>
+            <div class="detalhe">${sinopse}</div>
+        </div>
+        <div class="controle">
+            <div class="label">Tags</div>
+            <div class="detalhe">${tags.join(', ')}</div>
+        </div>
+        <div class="controle">
+            <div class="label">Descrição</div>
+            <div class="detalhe">${descricao}</div>
+        </div>
+        <div class="controle">
+            <div class="label">Dimensões</div>
+            <div class="detalhe">${dimensoes[0]} x ${dimensoes[1]} mm</div>
+        </div>
+        <div class="controle">
+            <div class="label">ISBN (físico/digital)</div>
+            <div class="detalhe">${isbnfisico}${isbnfisico != '' && isbndigital!= '' ? ` / ` : ` `}${isbndigital}</div>
+        </div>
+        <div class="controle">
+            <div class="label">Informações relevantes</div>
+            <div class="detalhe">${relevantes}</div>
+        </div>
+    `;
+    document.querySelector('#proj-detalhes').innerHTML = projDetails;
+}
+
+/* calculando o progresso da barra... */
+function calcLoad(){
+    /* somar todos os pesos das tarefas */
+    let somaTarefas = 0;
+    let somaChecked = 0;
+    for( var i = 0; i < tarefas.tarefasItens.length; i++ ){
+        if( tarefas.tarefasItens[i].used ){
+            let somaPesos = 0
+            while( somaPesos < tarefas.categorias.length ){
+                somaTarefas += ( tarefas.tarefasItens[i].categoria == tarefas.categorias[somaPesos].name ) ? tarefas.categorias[somaPesos].peso : 0;
+                somaPesos++;
+            }
+        }
+    }
+    let teste = 0;
+    tarefas.tarefasItens.forEach( e => {
+        let ii = 0;
+        console.log(teste);
+        if( e.check && e.used && e.started ){
+            while( ii < tarefas.categorias.length ){
+                somaChecked += ( e.categoria == tarefas.categorias[ii].name ) ? tarefas.categorias[ii].peso : 0;
+                ii++;
+            }
+        }
+        teste++;
+        
+    })
+    console.log(`${somaChecked} divido por ${somaTarefas}`);
+    
+    return somaChecked/somaTarefas;
+}
+
+/* escrevendo detalhes do projeto... */
+writeDetails( projeto.nome, projeto.autor, projeto.edicao, projeto.ano, projeto.sinopse, projeto.tags, projeto.descricao, projeto.dimensoes, projeto.isbnFisico, projeto.isbnDigital, projeto.relevantes );
+/* escrevendo as tarefas do projeto... */
+writeTask();
+/* atualizando barra de progresso... */
+const PesoTarefas = calcLoad();
+
+runBar(PesoTarefas);
+
