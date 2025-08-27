@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>AGENDA DE TRABALHO - MATIZES</title>
+
+    <link rel="stylesheet" href="css.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+    </style>
+</head>
+<body>
+    <main>
+        <div id="header">
+            <div class="mesma-linha">
+                <h1>Agenda do projeto</h1>
+                <i id="menu-button" class="material-icons" onclick="clickMenu()">menu</i>
+            </div>
+            <nav id="nav-pc">
+                <ul>
+                    <li>Barra de progresso</li>
+                    <li>Tarefas</li>
+                    <li>Detalhes do projeto</li>
+                    <li>Listas</li>
+                    <li>Histórico de revisão</li>
+                </ul>
+            </nav>
+            <nav id="nav-mobile">
+                <ul>
+                    <li><a href="#ancor-progress">Barra de progresso</a></li>
+                    <li><a href="#ancor-tarefas">Tarefas</a></li>
+                    <li><a href="#ancor-detalhes">Detalhes do projeto</a></li>
+                    <li><a href="#ancor-listas">Listas</a></li>
+                    <li><a href="#ancor-revisao">Histórico de revisão</a></li>
+                    <li><a href="https://drive.google.com/open?id=1K2qI3mUn5LjQyuS4ox3oXpVpMSuZ7YdI&usp=drive_fs" target="_blank">Link para projeto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="top-margem"></div>
+        <section id="observacao">
+            <p>
+                Acompanhe seu projeto. Atraves desse log de produção você pode ter uma melhor percepção de como vai seu livro. Acompanhe os detalhes em TAREFAS. Outros detalhes vão estar presentes nas 
+                outras sessões destacadas no menu acima. Acesse o mesmo para ir mais rápido para onde deseja. Clique no botão de voltar que se encontra no botão no canto direito inferior para retornar ao 
+                topo. Esse arquivo será atualizado nos dias em que alguma tarefa estiver sido completada. A barra abaixo indica a progressão das tarefas de produção. 
+            </p>
+        </section>
+        <section id="ancor-progress"><div id="bar-progresso"><div class="color-bar"></div></div></section>
+        <section id="ancor-tarefas">
+            <h2>Tarefas</h2>
+            <h3>Preparativos</h3>
+            <div id="id-preparativos"></div>
+            <h3>Pré-Diagramação</h3>
+            <div id="id-pre-diagramacao"></div>
+            <h3>Diagramação</h3>
+            <div id="id-diagramacao"></div>
+            <h3>Web</h3>
+            <div id="id-web"></div>
+            <h3>Aprovações</h3>
+            <div id="id-aprovacoes"></div>
+            <h3>Fechamentos</h3>
+            <div id="id-fechamentos"></div>
+            <h3>Revisões</h3>
+            <div id="id-revisoes"></div>
+        </section>
+        <section id="ancor-detalhes">
+            <h2>Detalhes do projeto</h2>
+            <div id="proj-detalhes"></div>
+        </section>
+        <section id="ancor-listas">
+            <h2>Listas</h2>
+            <h3>Fontes</h3>
+            <figure><img src="img/fontes.JPG" alt=""></figure>
+            <h3>Estilos</h3>
+        </section>
+        <section id="ancor-revisao">
+            <h2>Revisões</h2>
+            <div id="historico-revisao"></div></section>
+        <section id="ancor-redes"></section>
+    </main>
+    
+</body>
+<script src="agenda.js"></script>
+</html>
