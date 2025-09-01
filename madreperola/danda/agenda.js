@@ -26,30 +26,30 @@ const tarefas = {
         { name: 'Fechamentos', peso: 1 },
     ],
     tarefasItens: [
-        { name: 'Acerto do orçamento', categoria: 'Preparativos', dataInicio: '13/08/2025', dataFinal: '13/08/2025', started: true, check: true, used: true },
-        { name: 'Preparando o espaço de trabalho', categoria: 'Preparativos', dataInicio: '13/08/2025', dataFinal: '15/08/2025', started: true, check: true, used: true },
-        { name: 'Capitando imagens', categoria: 'Preparativos', dataInicio: '14/08/2025', dataFinal: '15/08/2025', started: true, check: true, used: true },
-        { name: 'Capitando originais', categoria: 'Preparativos', dataInicio: '13/08/2025', dataFinal: '12/08/2025', started: false, check: false, used: false },
-        { name: 'Criando lista de fontes', categoria: 'Pré-diagramação', dataInicio: '13/08/2025', dataFinal: '08/08/2025', started: true, check: true, used: true },
-        { name: 'Criando lista de estilos', categoria: 'Pré-diagramação', dataInicio: '13/08/2025', dataFinal: '08/08/2025', started: true, check: true, used: true },
-        { name: 'Criando arquivo de formatação (word)', categoria: 'Pré-diagramação', dataInicio: '13/08/2025', dataFinal: '05/08/2025', started: false, check: false, used: false },
-        { name: 'Trabalhando no arquivo de formatação (word)', categoria: 'Pré-diagramação', dataInicio: '13/08/2025', dataFinal: '07/08/2025', started: false, check: false, used: false },
-        { name: 'Finalizando arquivo de formatação (word)', categoria: 'Pré-diagramação', dataInicio: '13/08/2025', dataFinal: '07/08/2025', started: false, check: false, used: false },
-        { name: 'Criando arquivo de diagramação (InDesign)', categoria: 'Diagramação', dataInicio: '13/08/2025', dataFinal: '07/08/2025', started: false, check: false, used: false },
-        { name: 'Criando projeto gráfico (InDesign)', categoria: 'Diagramação', dataInicio: '13/08/2025', dataFinal: '11/08/2025', started: false, check: false, used: false },
-        { name: 'Trabalhando no arquivo de diagramação (InDesign)', categoria: 'Diagramação', dataInicio: '13/08/2025', dataFinal: '15/08/2025', started: false, check: false, used: false },
-        { name: 'Finalizando arquivo de diagramação (InDesign)', categoria: 'Diagramação', dataInicio: '13/08/2025', dataFinal: '13/08/2025', started: false, check: false, used: false },
-        { name: 'Aprovação de projeto gráfico', categoria: 'Aprovações', dataInicio: '13/08/2025', dataFinal: '14/08/2025', started: false, check: false, used: false },
-        { name: 'Aprovação de diagramação', categoria: 'Aprovações', dataInicio: '13/08/2025', dataFinal: '17/08/2025', started: false, check: false, used: false },
-        { name: 'Revisões de diagramação', categoria: 'Revisão', dataInicio: '13/08/2025', dataFinal: '18/08/2025', started: false, check: false, used: false },
-        { name: 'Criação do projeto web', categoria: 'Web', dataInicio: '15/08/2025', dataFinal: '15/08/2025', started: true, check: true, used: true },
-        { name: 'Trabalhando no projeto web', categoria: 'Web', dataInicio: '15/08/2025', dataFinal: '21/08/2025', started: true, check: true, used: true },
-        { name: 'Finalizando projeto web', categoria: 'Web', dataInicio: '16/08/2025', dataFinal: '21/08/2025', started: true, check: true, used: true },
-        { name: 'Revisão de projeto web', categoria: 'Revisão', dataInicio: '21/08/2025', dataFinal: '22/08/2025', started: true, check: false, used: true },
-        { name: 'Fechamento de diagramação (InDesign)', categoria: 'Fechamentos', dataInicio: '13/08/2025', dataFinal: '19/08/2025', started: false, check: false, used: false },
-        { name: 'Fechamento de projeto web', categoria: 'Fechamentos', dataInicio: '21/08/2025', dataFinal: '22/08/2025', started: true, check: false, used: true},
-        { name: 'Período de revisão gratuita', categoria: 'Fechamentos', dataInicio: '21/08/2025', dataFinal: '21/09/2025', started: true, check: false, used: true },
-        { name: 'PROJETO FECHADO', categoria: 'Fechamentos', dataInicio: '20/09/2025', dataFinal: '21/09/2025', started: false, check: false, used: true },
+        { name: 'Acerto do orçamento', categoria: 'Preparativos', dataInicio: '22/09/2025', dataFinal: '22/09/2025', started: true, check: true, used: true },
+        { name: 'Preparando o espaço de trabalho', categoria: 'Preparativos', dataInicio: '16/09/2025', dataFinal: '17/09/2025', started: true, check: true, used: true },
+        { name: 'Capitando imagens', categoria: 'Preparativos', dataInicio: '16/09/2025', dataFinal: '18/09/2025', started: true, check: true, used: true },
+        { name: 'Capitando originais', categoria: 'Preparativos', dataInicio: '13/09/2025', dataFinal: '12/09/2025', started: false, check: false, used: false },
+        { name: 'Criando lista de fontes', categoria: 'Pré-diagramação', dataInicio: '17/09/2025', dataFinal: '18/09/2025', started: true, check: true, used: true },
+        { name: 'Criando lista de estilos', categoria: 'Pré-diagramação', dataInicio: '17/09/2025', dataFinal: '17/09/2025', started: true, check: true, used: true },
+        { name: 'Criando arquivo de formatação (word)', categoria: 'Pré-diagramação', dataInicio: '13/09/2025', dataFinal: '05/09/2025', started: false, check: false, used: false },
+        { name: 'Trabalhando no arquivo de formatação (word)', categoria: 'Pré-diagramação', dataInicio: '13/09/2025', dataFinal: '07/09/2025', started: false, check: false, used: false },
+        { name: 'Finalizando arquivo de formatação (word)', categoria: 'Pré-diagramação', dataInicio: '13/09/2025', dataFinal: '07/09/2025', started: false, check: false, used: false },
+        { name: 'Criando arquivo de diagramação (InDesign)', categoria: 'Diagramação', dataInicio: '13/09/2025', dataFinal: '07/09/2025', started: false, check: false, used: false },
+        { name: 'Criando projeto gráfico (InDesign)', categoria: 'Diagramação', dataInicio: '13/09/2025', dataFinal: '11/09/2025', started: false, check: false, used: false },
+        { name: 'Trabalhando no arquivo de diagramação (InDesign)', categoria: 'Diagramação', dataInicio: '13/09/2025', dataFinal: '15/09/2025', started: false, check: false, used: false },
+        { name: 'Finalizando arquivo de diagramação (InDesign)', categoria: 'Diagramação', dataInicio: '13/09/2025', dataFinal: '13/09/2025', started: false, check: false, used: false },
+        { name: 'Aprovação de projeto gráfico', categoria: 'Aprovações', dataInicio: '13/09/2025', dataFinal: '14/09/2025', started: false, check: false, used: false },
+        { name: 'Aprovação de diagramação', categoria: 'Aprovações', dataInicio: '13/09/2025', dataFinal: '17/09/2025', started: false, check: false, used: false },
+        { name: 'Revisões de diagramação', categoria: 'Revisão', dataInicio: '13/09/2025', dataFinal: '18/09/2025', started: false, check: false, used: false },
+        { name: 'Criação do projeto web', categoria: 'Web', dataInicio: '17/09/2025', dataFinal: '17/09/2025', started: true, check: true, used: true },
+        { name: 'Trabalhando no projeto web', categoria: 'Web', dataInicio: '17/09/2025', dataFinal: '22/09/2025', started: true, check: true, used: true },
+        { name: 'Finalizando projeto web', categoria: 'Web', dataInicio: '22/09/2025', dataFinal: '27/09/2025', started: true, check: true, used: true },
+        { name: 'Revisão de projeto web', categoria: 'Revisão', dataInicio: '22/09/2025', dataFinal: '01/10/2025', started: true, check: true, used: true },
+        { name: 'Fechamento de diagramação (InDesign)', categoria: 'Fechamentos', dataInicio: '13/09/2025', dataFinal: '19/09/2025', started: false, check: false, used: false },
+        { name: 'Fechamento de projeto web', categoria: 'Fechamentos', dataInicio: '27/09/2025', dataFinal: '01/10/2025', started: true, check: true, used: true},
+        { name: 'Período de revisão gratuita', categoria: 'Fechamentos', dataInicio: '28/09/2025', dataFinal: '28/10/2025', started: true, check: false, used: true },
+        { name: 'PROJETO FECHADO', categoria: 'Fechamentos', dataInicio: '28/10/2025', dataFinal: '29/10/2025', started: false, check: false, used: true },
     ]
 }
 
@@ -151,17 +151,21 @@ function writeTask(){
 
 /* detalhes do projeto */
 const projeto = {
-    nome: 'Matizes',
-    autor: ['Ana Fonseca', 'Maurenn Veras'],
+    nome: 'Dandá',
+    autor: ['Janaína de Figueiredo', 'Mayara Smith'],
     edicao: '2ª edição',
     ano: '2025',
-    sinopse: `O céu é azul? Matizes convida o leitor para uma viagem pelo mundo, instigando o olhar para a diversidade, pois, assim como as pessoas, o céu tem muitas cores.`,
-    tags: ['céu', 'diferenças', 'equidade', 'prosa', 'poesia'],
-    descricao: `O céu é azul? Matizes convida o leitor para uma viagem pelo mundo, instigando o olhar para a diversidade, pois, assim como as pessoas, o céu tem muitas cores.`,
-    dimensoes: [275, 205],
-    isbnFisico: '978-65-83682-00-0 (fisico)',
-    isbnDigital: '978-65-984575-8-7 (digital)',
-    relevantes: 'Edição de Juliana Pádua. Orçamento de R$ 756,31. Pagamento à vista no dia de entrega.'
+    sinopse: `Dandá é uma criança bem pequena que vivencia, de forma afetiva, o terreiro. A narrativa, centrada na descoberta multissensorial desse território, revela os caminhos 
+    da personagem na tentativa de interagir com uma galinha-d’angola que se esconde atrás das folhagens, dos tambores… Ao adentrar nesse espaço, tanto Dandá quanto o leitor 
+    acessam segredos antigos e experimentam o universo afro-brasileiro, como uma espécie de iniciação aos códigos culturais.`,
+    tags: ['Candomblé', 'Equidade', 'Galinha', 'Dangola', 'infatil'],
+    descricao: `Dandá é uma criança bem pequena que vivencia, de forma afetiva, o terreiro. A narrativa, centrada na descoberta multissensorial desse território, revela os caminhos 
+    da personagem na tentativa de interagir com uma galinha-d’angola que se esconde atrás das folhagens, dos tambores… Ao adentrar nesse espaço, tanto Dandá quanto o leitor 
+    acessam segredos antigos e experimentam o universo afro-brasileiro, como uma espécie de iniciação aos códigos culturais.`,
+    dimensoes: [205, 130],
+    isbnFisico: '(?) (fisico)',
+    isbnDigital: '978-65-83691-01-9 (digital)',
+    relevantes: 'Orçamento de R$ 897,16. Pagamento à vista no dia de entrega.'
 }
 
 function writeDetails(nome, autor, edicao, ano, sinopse, tags, descricao, dimensoes, isbnfisico, isbndigital, relevantes){
