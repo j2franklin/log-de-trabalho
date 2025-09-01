@@ -151,21 +151,17 @@ function writeTask(){
 
 /* detalhes do projeto */
 const projeto = {
-    nome: 'Dandá',
-    autor: ['Janaína de Figueiredo', 'Mayara Smith'],
+    nome: 'Matizes',
+    autor: ['Ana Fonseca', 'Maurenn Veras'],
     edicao: '2ª edição',
     ano: '2025',
-    sinopse: `Dandá é uma criança bem pequena que vivencia, de forma afetiva, o terreiro. A narrativa, centrada na descoberta multissensorial desse território, revela os caminhos 
-    da personagem na tentativa de interagir com uma galinha-d’angola que se esconde atrás das folhagens, dos tambores… Ao adentrar nesse espaço, tanto Dandá quanto o leitor 
-    acessam segredos antigos e experimentam o universo afro-brasileiro, como uma espécie de iniciação aos códigos culturais.`,
-    tags: ['Candomblé', 'Equidade', 'Galinha', 'Dangola', 'infatil'],
-    descricao: `Dandá é uma criança bem pequena que vivencia, de forma afetiva, o terreiro. A narrativa, centrada na descoberta multissensorial desse território, revela os caminhos 
-    da personagem na tentativa de interagir com uma galinha-d’angola que se esconde atrás das folhagens, dos tambores… Ao adentrar nesse espaço, tanto Dandá quanto o leitor 
-    acessam segredos antigos e experimentam o universo afro-brasileiro, como uma espécie de iniciação aos códigos culturais.`,
-    dimensoes: [205, 130],
-    isbnFisico: '(?) (fisico)',
-    isbnDigital: '978-65-83691-01-9 (digital)',
-    relevantes: 'Orçamento de R$ 897,16. Pagamento à vista no dia de entrega.'
+    sinopse: `O céu é azul? Matizes convida o leitor para uma viagem pelo mundo, instigando o olhar para a diversidade, pois, assim como as pessoas, o céu tem muitas cores.`,
+    tags: ['céu', 'diferenças', 'equidade', 'prosa', 'poesia'],
+    descricao: `O céu é azul? Matizes convida o leitor para uma viagem pelo mundo, instigando o olhar para a diversidade, pois, assim como as pessoas, o céu tem muitas cores.`,
+    dimensoes: [275, 205],
+    isbnFisico: '978-65-83682-00-0 (fisico)',
+    isbnDigital: '978-65-984575-8-7 (digital)',
+    relevantes: 'Edição de Juliana Pádua. Orçamento de R$ 756,31. Pagamento à vista no dia de entrega.'
 }
 
 function writeDetails(nome, autor, edicao, ano, sinopse, tags, descricao, dimensoes, isbnfisico, isbndigital, relevantes){
