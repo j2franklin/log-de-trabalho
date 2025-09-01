@@ -45,9 +45,9 @@ const tarefas = {
         { name: 'Criação do projeto web', categoria: 'Web', dataInicio: '17/09/2025', dataFinal: '17/09/2025', started: true, check: true, used: true },
         { name: 'Trabalhando no projeto web', categoria: 'Web', dataInicio: '17/09/2025', dataFinal: '22/09/2025', started: true, check: true, used: true },
         { name: 'Finalizando projeto web', categoria: 'Web', dataInicio: '22/09/2025', dataFinal: '27/09/2025', started: true, check: true, used: true },
-        { name: 'Revisão de projeto web', categoria: 'Revisão', dataInicio: '22/09/2025', dataFinal: '28/09/2025', started: true, check: false, used: true },
+        { name: 'Revisão de projeto web', categoria: 'Revisão', dataInicio: '22/09/2025', dataFinal: '01/10/2025', started: true, check: true, used: true },
         { name: 'Fechamento de diagramação (InDesign)', categoria: 'Fechamentos', dataInicio: '13/09/2025', dataFinal: '19/09/2025', started: false, check: false, used: false },
-        { name: 'Fechamento de projeto web', categoria: 'Fechamentos', dataInicio: '27/09/2025', dataFinal: '28/09/2025', started: true, check: false, used: true},
+        { name: 'Fechamento de projeto web', categoria: 'Fechamentos', dataInicio: '27/09/2025', dataFinal: '01/10/2025', started: true, check: true, used: true},
         { name: 'Período de revisão gratuita', categoria: 'Fechamentos', dataInicio: '28/09/2025', dataFinal: '28/10/2025', started: true, check: false, used: true },
         { name: 'PROJETO FECHADO', categoria: 'Fechamentos', dataInicio: '28/10/2025', dataFinal: '29/10/2025', started: false, check: false, used: true },
     ]
